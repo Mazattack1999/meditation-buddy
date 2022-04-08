@@ -1,0 +1,1 @@
+categories = ["nature", "space", "dogs", ];
