@@ -9,31 +9,39 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Meditation Buddy</h1> 
-        <p id="quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium corrupti numquam velit blanditiis magni, nihil facilis? Blanditiis repellendus suscipit eius, recusandae eveniet est dignissimos, commodi architecto quidem repellat similique iusto?</p>
-        <nav>
-            <ul>
-                <li>
-                    <a href="./favorites.html">Favorites</a>
-                </li>
-                <li>
-                    <a href="#search">Search</a>
-                </li>
-            </ul>
-        </nav>
+    <!-- columns container -->
+    <header class="index-header columns is-mobile">
+        <!-- single column -->
+        <div class="column is-flex is-flex-direction-column is-align-items-center is-justify-content-space-between">
+
+            <h1 class="is-size-3-mobile is-size-1-tablet has-text-centered">Meditation Buddy</h1> 
+            <p id="quote" class="has-text-centered">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium corrupti numquam velit blanditiis magni, nihil facilis? Blanditiis repellendus suscipit eius, recusandae eveniet est dignissimos, commodi architecto quidem repellat similique iusto?</p>
+            <nav>
+                <ul class="is-flex justify-content-space-between">
+                    <li>
+                        <a href="./favorites.html">Favorites</a>
+                    </li>
+                    <li>
+                        <a href="#search">Search</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section id="search">
-        <!-- Intro text -->
-        <p id="intro">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore a minus, quisquam harum reprehenderit adipisci ad, molestiae reiciendis tempore itaque error architecto sed alias mollitia asperiores, voluptates laudantium totam quas?</p>
+    <!-- Columns container -->
+    <section id="search" class="columns">
+        <div class="column is-flex is-flex-direction-column is-align-items-center is-justify-content-flex-start">
+            <!-- Intro text -->
+            <p id="intro" class="has-text-centered mb-6 mt-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore a minus, quisquam harum reprehenderit adipisci ad, molestiae reiciendis tempore itaque error architecto sed alias mollitia asperiores, voluptates laudantium totam quas?</p>
 
-        <form>
-            <input type="text" placeholder="Nature, space, animals..." />
-            <button id="submit-button" type="submit">Start Relaxing!</button>
-        </form>
+            <form class="is-flex is-flex-direction-column mb-4">
+                <input type="text" placeholder="Nature, space, animals..." class="mb-2"/>
+                <button id="submit-button" type="submit" class="button">Start Relaxing!</button>
+            </form>
 
-        <button id="random-button" type="button">Random Category</button>
+            <button id="random-button" type="button" class="button">Random Category</button>
+        </div>
     </section>
 
 

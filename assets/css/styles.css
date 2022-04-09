@@ -3,3 +3,32 @@
     --color2: #B8C0FF;
     --color3: #BBD0FF;
 }
+
+/* index.html header start */
+.index-header {
+    height: 100vh;
+}
+
+#quote {
+    width: 50%;
+}
+
+.index-header nav ul {
+    text-decoration: none;
+}
+
+.index-header nav ul li {
+    margin: 2px 10px;
+}
+
+.index-header nav ul li a {
+    color: var(--color1);
+}
+
+/* index.html header end */
+
+/* index.html search section start */
+#search {
+    height: 100vh;
+}
+/* index.html search section end */
