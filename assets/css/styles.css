@@ -3,3 +3,9 @@
     --color2: #B8C0FF;
     --color3: #BBD0FF;
 }
+
+.fav-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
