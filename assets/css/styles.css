@@ -3,3 +3,18 @@
     --color2: #B8C0FF;
     --color3: #BBD0FF;
 }
+
+/* meditation.html header styling start */
+.meditation-nav a {
+    margin: 2px 10px;
+}
+/* meditation.html header styling end */
+
+/* meditation.html main styling start */
+#meditation-area {
+    height: 90vh;
+}
+.quote {
+    width: 50%;
+}
+/* meditation.html main styling end */
