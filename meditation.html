@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,32 +9,36 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
-<body>
-    <header>
-        <h1>Meditation Buddy</h1>
 
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.hmtl">Return to Home</a>
-                </li>
-                <li>
-                    <a href="./favorites.html">Favorites</a>
-                </li>
-            </ul>
-        </nav>
+<body>
+    <header class="is-mobile">
+        <div class="column is-flex is-justify-content-space-between is-flex-wrap-wrap">
+            <h1 class="title is-size-3-mobile is-size-1-tablet">Meditation Buddy</h1>
+            <nav class="meditation-nav is-flex">
+                <a class="subtitle" href="./index.html">Return to Home</a>
+                <a class="subtitle" href="./favorites.html">Favorites</a>
+            </nav>
+        </div>
     </header>
 
-    <main id="meditation-area">
+    <main id="meditation-area" class="is-flex is-flex-direction-column">
         <!-- Insert background image to cover all of main -->
 
         <!-- Randomly generated quote -->
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur eaque numquam minus! Est quia fugit voluptate quam, ipsa impedit consequuntur dicta distinctio laboriosam ratione, suscipit doloribus beatae, similique fuga at?</p>
+        <div class="column is-flex is-justify-content-center is-align-items-center">
+            <p class="quote has-text-centered">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. In quidem nulla saepe consequuntur vitae necessitatibus error minus dolor odit hic, libero neque inventore facere quam quae minima laborum repudiandae assumenda.
+            </p>
+        </div>
+
 
         <!-- Save button -->
-        <button id="save-button">Save as Favorite</button>
+        <div class="is-flex is-justify-content-flex-end is-align-items-flex-end">
+            <button id="save-button" class="button mb-2 mr-2">Save as Favorite</button>
+        </div>
     </main>
 
     <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
