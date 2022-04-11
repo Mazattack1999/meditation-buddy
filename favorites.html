@@ -11,24 +11,19 @@
     <!-- <link rel="stylesheet" href="styles/debug.css"> -->
 </head>
 
-<body>
-    <header class = "hero has-text-left is-size-1">
-        <h1>Meditation Buddy</h1>
-    </header>
-
-    <nav class=" is-centered fav-center">
-        <li class="column has-text-centered">
-            <a href="meditation.html">Back to Meditation Page</a>
-        </li>
-        <li class = "column has-text-centered">
-            <a href="index.html">Back to Homepage</a>
-        </li>
-    </nav>
+<header class="is-mobile">
+    <div class="column is-flex is-justify-content-space-between is-flex-wrap-wrap">
+        <h1 class="title is-size-3-mobile is-size-1-tablet">Meditation Buddy</h1>
+        <nav class="meditation-nav is-flex">
+            <a class="subtitle" href="./index.html">Return to Home</a>
+            <a class="subtitle" href="./meditation.html">Meditation Page</a>
+        </nav>
+    </div>
+</header>
 
 
-
-
-    <main>
+    <main class ="column is-two-thirds is-offset-2 has-text-centered is-size-3 has-background-black">
+        <div></div>
         <h2>Favorite Meditations</h2>
         <!-- display favorite quotes and images -->
         <div id="favorites"></div>
