@@ -9,8 +9,8 @@ var quoteData;
 
 // get which page user is on
 var currentPage = window.location.href;
-currentPage = currentPage.split("/");
-currentPage = currentPage[currentPage.length-1];
+// currentPage = currentPage.split("/");
+// currentPage = currentPage[currentPage.length-1];
 
 //homepage header
 var homeHeader = document.querySelector("#index-header");
@@ -81,7 +81,8 @@ function storeQuotes() {
  }
 
  console.log(currentPage)
- if (currentPage === "index.html"){
+ if (currentPage.includes("index.html")){
     loadStartupData();
  }
  
+
