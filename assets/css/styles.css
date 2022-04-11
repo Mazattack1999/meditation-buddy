@@ -23,6 +23,7 @@
 /* index.html header start */
 .index-header {
     height: 100vh;
+    background-size:contain; background-repeat: no-repeat; background-position:center;
 }
 
 #quote {

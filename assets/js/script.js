@@ -26,7 +26,6 @@ function storeImages(value){
             started = true;
             loadHomePage();
         }
-        
     })
 }
 
@@ -38,7 +37,7 @@ function storeQuotes() {
             return  response.json() 
         })
     .then( function (data){
-        var quoteData = data;
+        quoteData = data;
 
         // check if page is not started and image data is not null
         if (!started && imageData) {
@@ -52,20 +51,26 @@ function storeQuotes() {
  function getRandom(array){
      // random index
      var randIndex = Math.floor(Math.random() * array.length);
-     return randIndex;
+     return array[randIndex];
  }
 
 
  function loadStartupData() {
+     // fetch and store images of random category
     storeImages(getRandom(categories));
+    storeQuotes();
  }
 
  // must execute after asynchronous functionality of fetches is complete
  function loadHomePage() {
-     // fetch and store images of random category
-     storeImages(getRandom(categories));
     var randomImage = getRandom(imageData);
+    var randomQuote = getRandom(quoteData);
+
     console.log(randomImage);
+
+    homeHeader.setAttribute("style", "background-image:url(" + randomImage.src.large +");")
+
  }
 
-loadHomePage();
+ // on start of page
+ loadStartupData();
