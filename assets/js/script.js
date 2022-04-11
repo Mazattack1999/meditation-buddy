@@ -7,6 +7,11 @@ var started = false;
 var imageData;
 var quoteData;
 
+// get which page user is on
+var currentPage = window.location.href;
+currentPage = currentPage.split("/");
+currentPage = currentPage[currentPage.length-1];
+
 //homepage header
 var homeHeader = document.querySelector("#index-header");
 var homeQuote = document.querySelector("#quote");
@@ -75,5 +80,8 @@ function storeQuotes() {
 
  }
 
- // on start of page
- loadStartupData();
+ console.log(currentPage)
+ if (currentPage === "index.html"){
+    loadStartupData();
+ }
+ 
