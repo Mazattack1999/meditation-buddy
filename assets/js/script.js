@@ -9,6 +9,7 @@ var quoteData;
 
 //homepage header
 var homeHeader = document.querySelector("#index-header");
+var homeQuote = document.querySelector("#quote");
 
 function storeImages(value){
     fetch("https://api.pexels.com/v1/search?query=" + value + "&per_page=25", {
@@ -67,8 +68,10 @@ function storeQuotes() {
     var randomQuote = getRandom(quoteData);
 
     console.log(randomImage);
+    console.log(randomQuote);
 
     homeHeader.setAttribute("style", "background-image:url(" + randomImage.src.large +");")
+    homeQuote.innerHTML = randomQuote.q + " </br>-" + randomQuote.a;
 
  }
 

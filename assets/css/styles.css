@@ -4,22 +4,6 @@
     --color3: #BBD0FF;
 }
 
-
-.fav-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero {
-    font-size: 42px;
-    padding: 0 0 0 5vw;
-}
-
-.nav {
-    font-size: 28px;
-    justify-content:space-between;
-}
 /* index.html header start */
 .index-header {
     height: 100vh;
@@ -27,7 +11,10 @@
 }
 
 #quote {
-    width: 50%;
+    width: 75%;
+    background: rgba(19, 64, 116, 0.5);
+    color: var(--color2);
+    border-radius: 5px;
 }
 
 .index-header nav ul {
@@ -63,3 +50,22 @@
     width: 50%;
 }
 /* meditation.html main styling end */
+
+/* favorites.html start */
+.fav-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    font-size: 42px;
+    padding: 0 0 0 5vw;
+}
+
+.nav {
+    font-size: 28px;
+    justify-content:space-between;
+}
+
+/* favorites.html end */
