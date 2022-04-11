@@ -4,8 +4,18 @@
     --color3: #BBD0FF;
 }
 
-.fav-center{
+.fav-center {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.hero {
+    font-size: 42px;
+    padding: 0 0 0 5vw;
+}
+
+.nav {
+    font-size: 28px;
+    justify-content:space-between;
 }
