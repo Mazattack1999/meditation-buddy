@@ -7,14 +7,10 @@
 /* index.html header start */
 .index-header {
     height: 100vh;
-    background-size:contain; background-repeat: no-repeat; background-position:center;
 }
 
 #quote {
     max-width: 75%;
-    background: rgba(19, 64, 116, 0.5);
-    color: var(--color2);
-    border-radius: 5px;
 }
 
 .index-header nav ul {
@@ -69,3 +65,17 @@
 }
 
 /* favorites.html end */
+
+/* Utility classes start */
+.bg-image {
+    background-size:contain; 
+    background-repeat: no-repeat; 
+    background-position:center;  
+}
+
+.quote-area {
+    background: rgba(19, 64, 116, 0.5);
+    color: var(--color2);
+    border-radius: 5px;
+}
+/* Utility classes end */
