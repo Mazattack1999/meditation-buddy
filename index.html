@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
-<body>
+<body class="body">
     <!-- columns container -->
-    <header id="index-header" class="index-header columns is-mobile">
+    <header id="index-header" class="bg-image index-header columns is-mobile">
         <!-- single column -->
         <div class="column is-flex is-flex-direction-column is-align-items-center is-justify-content-space-between">
 
             <h1 id="topHeader" class="is-size-3-mobile is-size-1-tablet has-text-centered">Meditation Buddy</h1> 
-            <p id="quote" class="has-text-centered">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium corrupti numquam velit blanditiis magni, nihil facilis? Blanditiis repellendus suscipit eius, recusandae eveniet est dignissimos, commodi architecto quidem repellat similique iusto?</p>
+            <p id="quote" class="quote quote-area has-text-centered"></p>
             <nav class="nav">
                 <ul class="is-flex justify-content-space-between">
                     <li>
@@ -32,20 +32,6 @@
             </nav>
         </div>
     </header>
-    <!-- <header class ="fav-center">
-        <h1>Meditation Buddy</h1> 
-        <p id="quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium corrupti numquam velit blanditiis magni, nihil facilis? Blanditiis repellendus suscipit eius, recusandae eveniet est dignissimos, commodi architecto quidem repellat similique iusto?</p>
-        <nav>
-            <ul>
-                <li>
-                    <a href="./favorites.html">Favorites</a>
-                </li>
-                <li>
-                    <a href="#search">Search</a>
-                </li>
-            </ul>
-        </nav>
-    </header> -->
 
     <!-- Columns container -->
     <section id="search" class="columns">
@@ -60,11 +46,12 @@
             <div class="box">
                 <div class="field">
                     <form class="is-flex is-flex-direction-column mb-4">
-                        <input type="text" placeholder="Nature, space, animals..." class="mb-2 input is-info is-focused "/>
-                        <button id="submit-button" type="submit" class="button is-info is-light is-rounded is-focused">Start Relaxing!</button>
+                        <input id="search-bar" type="text" placeholder="Nature, space, animals..." class="mb-2 input is-info is-focused "/>
+                        <button id="submit-button" type="submit" class="button nav-btn is-info is-light is-rounded is-focused">Start Relaxing!</button>
                     </form>
-                    
-                    <button id="random-button" type="button" class="button is-link is-light is-rounded is-focused">Random Category</button>
+
+                    <hr>
+                    <button id="random-button" type="button" class="button nav-btn is-link is-light is-rounded is-focused">Random Category</button>
                 </div>
             </div>
         </div>
