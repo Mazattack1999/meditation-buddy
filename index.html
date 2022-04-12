@@ -14,15 +14,19 @@
         <!-- single column -->
         <div class="column is-flex is-flex-direction-column is-align-items-center is-justify-content-space-between">
 
-            <h1 class="is-size-3-mobile is-size-1-tablet has-text-centered">Meditation Buddy</h1> 
-            <p id="quote" class="quote-area has-text-centered px-2 py-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium corrupti numquam velit blanditiis magni, nihil facilis? Blanditiis repellendus suscipit eius, recusandae eveniet est dignissimos, commodi architecto quidem repellat similique iusto?</p>
-            <nav>
+            <h1 id="topHeader" class="is-size-3-mobile is-size-1-tablet has-text-centered">Meditation Buddy</h1> 
+            <p id="quote" class="has-text-centered">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium corrupti numquam velit blanditiis magni, nihil facilis? Blanditiis repellendus suscipit eius, recusandae eveniet est dignissimos, commodi architecto quidem repellat similique iusto?</p>
+            <nav class="nav">
                 <ul class="is-flex justify-content-space-between">
                     <li>
-                        <a href="./favorites.html">Favorites</a>
+                        <a href="./favorites.html" class="nav-item">
+                            <h1 id="navTitles" class="title is-4">Favorites</h1>
+                        </a>
                     </li>
                     <li>
-                        <a href="#search">Search</a>
+                        <a href="#search" class="nav-item">
+                            <h1 id="navTitles" class="title is-4">Search</h1>
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -33,14 +37,22 @@
     <section id="search" class="columns">
         <div class="column is-flex is-flex-direction-column is-align-items-center is-justify-content-flex-start">
             <!-- Intro text -->
-            <p id="intro" class="has-text-centered mb-6 mt-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore a minus, quisquam harum reprehenderit adipisci ad, molestiae reiciendis tempore itaque error architecto sed alias mollitia asperiores, voluptates laudantium totam quas?</p>
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <p id="intro" class="has-text-centered mb-6 mt-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore a minus, quisquam harum reprehenderit adipisci ad, molestiae reiciendis tempore itaque error architecto sed alias mollitia asperiores, voluptates laudantium totam quas?</p>
+                </div>
+            </div>
 
-            <form class="is-flex is-flex-direction-column mb-4">
-                <input id="search-bar" type="text" placeholder="Nature, space, animals..." class="mb-2"/>
-                <button id="submit-button" type="submit" class="button">Start Relaxing!</button>
-            </form>
-
-            <button id="random-button" type="button" class="button">Random Category</button>
+            <div class="box">
+                <div class="field">
+                    <form class="is-flex is-flex-direction-column mb-4">
+                        <input id="search-bar" type="text" placeholder="Nature, space, animals..." class="mb-2 input is-info is-focused "/>
+                        <button id="submit-button" type="submit" class="button is-info is-light is-rounded is-focused">Start Relaxing!</button>
+                    </form>
+                    
+                    <button id="random-button" type="button" class="button is-link is-light is-rounded is-focused">Random Category</button>
+                </div>
+            </div>
         </div>
     </section>
 
