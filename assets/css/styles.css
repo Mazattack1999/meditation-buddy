@@ -40,8 +40,10 @@
 
 #quote {
     max-width: 75%;
-    width: 50%;
-    color: var(--color3);
+    width: 30%;
+    background: rgba(19, 64, 116, 0.5);
+    color: white;
+    border-radius: 5px;
 }
 
 .index-header nav ul {
