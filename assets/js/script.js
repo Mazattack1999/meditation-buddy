@@ -37,14 +37,18 @@ function storeImages(value){
         headers: {
             Authorization: pApiKey
         }
-    }).then(function (response){
+    })
+    .then(function (response){
         return response.json()
-    }).then(function(data){
+    })
+    .then(function(data){
         imageData = data.photos;
 
         // get quote data
         storeQuotes();
-        
+    })
+    .catch(function(error){
+        console.log(error.message);
     })
 }
 
@@ -65,6 +69,9 @@ function storeQuotes() {
         } else if(searching) {
             searchData();
         }
+    })
+    .catch(function(error){
+        console.log(error.message);
     })
  }
 
