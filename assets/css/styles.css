@@ -112,6 +112,13 @@
   width: 60%;
 }
 
+.fav-title {
+  padding-bottom: 40px;
+  padding-top: 40px;
+  font-weight: lighter;
+  text-decoration: underline double var(--color1) 2px;
+}
+
 /* favorites.html end */
 
 /* Utility classes start */
