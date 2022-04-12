@@ -4,6 +4,16 @@
     --color3: #BBD0FF;
 }
 
+#topHeader {
+    color: #134074;
+    margin-top: 40px;
+    background-color: var(--color3);
+}
+
+#navTitles {
+    color: var(--color2);
+    background: transparent;
+}
 
 .fav-center {
     display: flex;
@@ -16,10 +26,10 @@
     padding: 0 0 0 5vw;
 }
 
-.nav {
+/* .nav {
     font-size: 28px;
     justify-content:space-between;
-}
+} */
 /* index.html header start */
 .index-header {
     height: 100vh;
@@ -28,6 +38,7 @@
 
 #quote {
     width: 50%;
+    color: var(--color3);
 }
 
 .index-header nav ul {
@@ -50,9 +61,9 @@
 /* index.html search section end */
 
 /* meditation.html header styling start */
-.meditation-nav a {
+/* .meditation-nav a {
     margin: 2px 10px;
-}
+} */
 /* meditation.html header styling end */
 
 /* meditation.html main styling start */
