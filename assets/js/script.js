@@ -158,7 +158,7 @@ function createFavoritesList() {
         // create img tag 
         var img = document.createElement("img");
         img.setAttribute("alt", currentImage.alt);
-        img.setAttribute("src", currentImage.src.small);
+        img.setAttribute("src", currentImage.src.portrait);
         // append img to favContainer
         favContainer.appendChild(img);
 
