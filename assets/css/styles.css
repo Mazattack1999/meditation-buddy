@@ -1,21 +1,27 @@
 :root {
     --color1: #134074;
     --color2: #B8C0FF;
-    --color3: #BBD0FF;
+    --color3: #9cb8f6;
+}
+
+.body {
+    background: black;
 }
 
 #topHeader {
     background: var(--color1);
     margin-top: 40px;
-    color: var(--color3);
+    color: white;
     border-radius: 10px;
     padding: 4px 15px;
 }
 
 #navTitles {
-    color: var(--color2);
-    background: transparent;
-}
+    background: rgba(19, 64, 116, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+} 
 
 .fav-center {
     display: flex;
@@ -36,14 +42,7 @@
 /* index.html header start */
 .index-header {
     height: 100vh;
-}
-
-#quote {
-    max-width: 75%;
-    width: 30%;
-    background: rgba(19, 64, 116, 0.5);
-    color: white;
-    border-radius: 5px;
+    background: black;
 }
 
 .index-header nav ul {
@@ -60,6 +59,9 @@
 /* index.html header end */
 
 /* index.html search section start */
+#intro {
+    color: rgb(255, 255, 255);
+}
 #search {
     height: 100vh;
 }
@@ -86,10 +88,6 @@
 
 #meditation-area {
     height: 90vh;
-}
-
-.quote {
-    width: 50%;
 }
 /* meditation.html styling end */
 
@@ -123,5 +121,6 @@
     background: rgba(19, 64, 116, 0.5);
     color: var(--color2);
     border-radius: 5px;
+    max-width: 350px;
 }
 /* Utility classes end */
