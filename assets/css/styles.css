@@ -8,6 +8,8 @@
     color: #134074;
     margin-top: 40px;
     background-color: var(--color3);
+    border-radius: 10px;
+    padding: 4px 15px;
 }
 
 #navTitles {
@@ -57,6 +59,11 @@
 /* index.html search section start */
 #search {
     height: 100vh;
+}
+
+.nav-btn {
+    width: 100%;
+    margin-top: 1%;
 }
 /* index.html search section end */
 
