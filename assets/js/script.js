@@ -32,6 +32,8 @@ var medMain = document.querySelector("#meditation-area");
 var medQuote = document.querySelector("#searched-quote");
 var favBtn = document.querySelector("#save-button");
 
+
+
 function storeImages(value){
     fetch("https://api.pexels.com/v1/search?query=" + value + "&per_page=25", {
         headers: {
@@ -66,6 +68,8 @@ function storeQuotes() {
         if(starting) {
             starting = false;
             loadHomePage();
+            //homepage interval to cycle through random image and quote every 10 seconds
+            setInterval(loadHomePage, 10000)
         } else if(searching) {
             searchData();
         }
@@ -138,6 +142,38 @@ function saveFavorite(value) {
     localStorage.setItem("favorites", JSON.stringify(favorites));
 }
 
+function createFavoritesList() {
+    // favorites page elements
+    var favList = document.querySelector("#favorites");
+
+    // loop through favorites array
+    for (var i = 0; i < favorites.length; i++) {
+        var currentImage = favorites[i].image;
+        var currentQuote = favorites[i].quote;
+
+        // create a container for the image and quote
+        var favContainer = document.createElement("li");
+        favContainer.classList.add("is-flex", "mt-2", "ml-1");
+
+        // create img tag 
+        var img = document.createElement("img");
+        img.setAttribute("alt", currentImage.alt);
+        img.setAttribute("src", currentImage.src.small);
+        // append img to favContainer
+        favContainer.appendChild(img);
+
+        // create p tag
+        var p = document.createElement("p");
+        p.classList.add("is-size-5")
+        p.innerHTML = currentQuote.q + " </br> -" + currentQuote.a;
+        // append p to favContainer
+        favContainer.appendChild(p);
+
+        // append favContainer to favList
+        favList.appendChild(favContainer);
+    }
+}
+
 
 console.log(currentPage)
 if (currentPage.includes("index.html")){
@@ -163,6 +199,8 @@ if (currentPage.includes("index.html")){
     
     loadStartupData();
 
+    
+
 } else if(currentPage.includes("meditation.html")){
     // if current page is meditation.html
 
@@ -180,9 +218,14 @@ if (currentPage.includes("index.html")){
     }
     // load favorites from local storage
     loadFavorites();
+} else if (currentPage.includes("favorites.html")){
+
+    //load favorites from local storage
+    loadFavorites();
+
+    createFavoritesList();
 }
 
-//homepage interval to cycle through random image and quote every 10 seconds
-setInterval(loadHomePage, 10000)
+
  
 
