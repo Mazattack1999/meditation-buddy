@@ -13,6 +13,13 @@ var quoteData;
 // get which page user is on
 var currentPage = window.location.href;
 
+// current image and quote on screen
+var image;
+var quote;
+
+// array to hold favorites
+var favorites = [];
+
 //homepage elements
 var homeHeader = document.querySelector("#index-header");
 var homeQuote = document.querySelector("#quote");
@@ -23,6 +30,7 @@ var randomBtn = document.querySelector("#random-button");
 // meditation page elements
 var medMain = document.querySelector("#meditation-area");
 var medQuote = document.querySelector("#searched-quote");
+var favBtn = document.querySelector("#save-button");
 
 function storeImages(value){
     fetch("https://api.pexels.com/v1/search?query=" + value + "&per_page=25", {
@@ -60,20 +68,19 @@ function storeQuotes() {
     })
  }
 
- // get a random value from any array
- function getRandom(array){
+// get a random value from any array
+function getRandom(array){
      // random index
      var randIndex = Math.floor(Math.random() * array.length);
      return array[randIndex];
- }
+}
 
- function loadStartupData() {
+function loadStartupData() {
      // fetch and store images of random category
     storeImages(getRandom(categories));
- }
-
- // must execute after asynchronous functionality of fetches is complete
- function loadHomePage() {
+}
+// must execute after asynchronous functionality of fetches is complete
+function loadHomePage() {
     var randomImage = getRandom(imageData);
     var randomQuote = getRandom(quoteData);
 
@@ -82,9 +89,9 @@ function storeQuotes() {
 
     homeHeader.setAttribute("style", "background-image:url(" + randomImage.src.portrait +");")
     homeQuote.innerHTML = randomQuote.q + " </br>-" + randomQuote.a;
- }
+}
 
- function searchData() {
+function searchData() {
     var randomImage = getRandom(imageData);
     var randomQuote = getRandom(quoteData);
 
@@ -94,22 +101,39 @@ function storeQuotes() {
     }))
     // go to meditation page
     window.location.href = "meditation.html";
- }
+}
 
- function loadMeditation(object) {
-    var image = object.image;
-    var quote = object.quote; 
+function loadMeditation(object) {
+    image = object.image;
+    quote = object.quote; 
 
     // set main background image
     medMain.setAttribute("style", "background-image:url(" + image.src.portrait +");")
 
     // set quote text
     medQuote.innerHTML = quote.q + " </br>-" + quote.a;
- }
+}
+
+function loadFavorites() {
+    // if local storage has favoirtes, load them, else set item
+    if(localStorage.getItem("favorites")) {
+        favorites = JSON.parse(localStorage.getItem("favorites"));
+    } else {
+        saveFavorite();
+    }
+}
+
+function saveFavorite(value) {
+    // if value is not null, save it to favorites
+    if(value) {
+        favorites.push(value);
+    }
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+}
 
 
- console.log(currentPage)
- if (currentPage.includes("index.html")){
+console.log(currentPage)
+if (currentPage.includes("index.html")){
     // if current page is index.html
     // index.html event listeners
     submitBtn.addEventListener("click", function(event){
@@ -131,14 +155,24 @@ function storeQuotes() {
     })
     
     loadStartupData();
- } else if(currentPage.includes("meditation.html")){
-     // if current page is meditation.html
 
-     // if search-data exists, get item from local storage
-     console.log(localStorage.getItem("search-result"));
-     if(localStorage.getItem("search-result")){
+} else if(currentPage.includes("meditation.html")){
+    // if current page is meditation.html
+
+    // favorite button event listener
+    favBtn.addEventListener("click", function(event){
+        var fav = JSON.parse(localStorage.getItem("search-result"));
+        saveFavorite(fav);
+    })
+
+
+    // if search-data exists, get item from local storage
+    console.log(localStorage.getItem("search-result"));
+    if(localStorage.getItem("search-result")){
         loadMeditation(JSON.parse(localStorage.getItem("search-result")));
-     }
- }
+    }
+    // load favorites from local storage
+    loadFavorites();
+}
  
 
