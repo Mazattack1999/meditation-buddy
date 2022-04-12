@@ -5,9 +5,9 @@
 }
 
 #topHeader {
-    color: #134074;
+    background: var(--color1);
     margin-top: 40px;
-    background-color: var(--color3);
+    color: var(--color3);
     border-radius: 10px;
     padding: 4px 15px;
 }
