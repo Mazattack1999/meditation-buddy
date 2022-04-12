@@ -68,6 +68,10 @@
     width: 35%;
 }
 
+#favorites li p {
+    width: 60%;
+}
+
 /* favorites.html end */
 
 /* Utility classes start */

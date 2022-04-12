@@ -153,7 +153,7 @@ function createFavoritesList() {
 
         // create a container for the image and quote
         var favContainer = document.createElement("li");
-        favContainer.classList.add("is-flex", "mt-2", "ml-1");
+        favContainer.classList.add("is-flex", "is-justify-content-space-between", "mt-2", "ml-auto");
 
         // create img tag 
         var img = document.createElement("img");
@@ -164,7 +164,7 @@ function createFavoritesList() {
 
         // create p tag
         var p = document.createElement("p");
-        p.classList.add("is-size-5")
+        p.classList.add("is-size-6-mobile", "is-size-5-tablet", "is-size-2-desktop")
         p.innerHTML = currentQuote.q + " </br> -" + currentQuote.a;
         // append p to favContainer
         favContainer.appendChild(p);
