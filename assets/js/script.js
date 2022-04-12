@@ -181,5 +181,8 @@ if (currentPage.includes("index.html")){
     // load favorites from local storage
     loadFavorites();
 }
+
+//homepage interval to cycle through random image and quote every 10 seconds
+setInterval(loadHomePage, 10000)
  
 
