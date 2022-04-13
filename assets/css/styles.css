@@ -5,6 +5,10 @@
     --color3: #9cb8f6;
   }
   
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  
   .body {
     background: black;
   }
@@ -45,6 +49,20 @@
   
   #search {
     height: 100vh;
+  --color1: #134074;
+  --color2: #b8c0ff;
+  --color3: #9cb8f6;
+}
+
+/* universal styling end */
+
+/* index.html styling start */
+#topHeader {
+    background: var(--color1);
+    margin-top: 40px;
+    color: white;
+    border-radius: 10px;
+    padding: 4px 15px;
   }
 
   #intro {
