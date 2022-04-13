@@ -5,6 +5,10 @@
   --color3: #9cb8f6;
 }
 
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
 .body {
   background: black;
 }
@@ -56,6 +60,13 @@
 
 #intro {
   color: rgb(255, 255, 255);
+  border-top: 2px solid var(--color3);
+  border-bottom: 2px solid var(--color3);
+}
+
+#introPresteps {
+  font-size: 22px;
+  font-weight: bold;
 }
 
 #search {
