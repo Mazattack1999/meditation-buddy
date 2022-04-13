@@ -176,32 +176,7 @@ function createFavoritesList() {
 
 
 console.log(currentPage, window.location.pathname)
-if (currentPage.includes("index.html") || window.location.pathname === "/"){
-    // if current page is index.html
-    // index.html event listeners
-    submitBtn.addEventListener("click", function(event){
-        event.preventDefault();
-        if (searchBar.value) {
-            searching = true;
-            var keyword = searchBar.value.trim();
-            // clear searchbar when value is saved
-            searchBar.value = "";
-    
-            storeImages(keyword);
-        }
-    })
-
-    randomBtn.addEventListener("click", function(event){
-        searching = true;
-        var keyword = getRandom(categories);
-        storeImages(keyword);
-    })
-    
-    loadStartupData();
-
-    
-
-} else if(currentPage.includes("meditation.html")){
+if(currentPage.includes("meditation.html")){
     // if current page is meditation.html
 
     // favorite button event listener
@@ -224,6 +199,28 @@ if (currentPage.includes("index.html") || window.location.pathname === "/"){
     loadFavorites();
 
     createFavoritesList();
+} else if (currentPage.includes("index.html") || window.location.pathname === "/"){
+    // if current page is index.html
+    // index.html event listeners
+    submitBtn.addEventListener("click", function(event){
+        event.preventDefault();
+        if (searchBar.value) {
+            searching = true;
+            var keyword = searchBar.value.trim();
+            // clear searchbar when value is saved
+            searchBar.value = "";
+    
+            storeImages(keyword);
+        }
+    })
+
+    randomBtn.addEventListener("click", function(event){
+        searching = true;
+        var keyword = getRandom(categories);
+        storeImages(keyword);
+    })
+    
+    loadStartupData();
 }
 
 
