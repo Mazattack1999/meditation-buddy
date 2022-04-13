@@ -1,9 +1,12 @@
 # Meditation Buddy
 
 ## Purpose: 
-Meditation Buddy is a website designed to provide users with inspirational quotes and calming images. The user can search for an image category or they can get a random category of images. As the user is given a selection of meditative images and quotes they have the option 
+Meditation Buddy is a website designed to provide users with inspirational quotes and calming images. The user can search for an image category or they can get a random category of images. 
+
+As the user is given a selection of meditative images and quotes they have the option to favorite them for later enjoyment. 
 
 The goal is to allow the user to achieve some stress relief upon visiting the website.
+
 
 ---
 
@@ -33,7 +36,7 @@ The following GIF demonstrates the web application's appearance and functionalit
 
 * GitHub [Repository](https://github.com/Mazattack1999/meditation-buddy)
 
-* Deployed application [URL]() 
+* Deployed application [URL](https://mazattack1999.github.io/meditation-buddy/) 
 
 ---
 ## Server-side APIs
