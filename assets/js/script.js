@@ -199,7 +199,7 @@ if(currentPage.includes("meditation.html")){
     loadFavorites();
 
     createFavoritesList();
-} else if (currentPage.includes("index.html") || window.location.pathname === "/"){
+} else if (currentPage.includes("index.html") || window.location.pathname === "/meditation-buddy/"){
     // if current page is index.html
     // index.html event listeners
     submitBtn.addEventListener("click", function(event){
