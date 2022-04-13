@@ -117,7 +117,7 @@ function searchData() {
         quote: randomQuote
     }))
 
-    if (imageData > 0) {
+    if (imageData.length > 0) {
         // go to meditation page
         window.location.href = "meditation.html";
     } else {
