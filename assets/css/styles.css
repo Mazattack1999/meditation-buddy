@@ -1,130 +1,105 @@
 /* universal styling start */
 :root {
-  --color1: #134074;
-  --color2: #b8c0ff;
-  --color3: #9cb8f6;
-}
-
-.body {
-  background: black;
-}
-
-/* .fav-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-.hero {
-  font-size: 42px;
-  padding: 0 0 0 5vw;
-}
-/* universal styling end */
-
-/* index.html styling start */
-#topHeader {
-    background: var(--color1);
-    margin-top: 40px;
-    color: white;
-    border-radius: 10px;
-    padding: 4px 15px;
+    --color1: #134074;
+    --color2: #b8c0ff;
+    --color3: #9cb8f6;
+  }
+  
+  .body {
+    background: black;
+  }
+  /* universal styling end */
+  
+  /* index.html styling start */
+  #topHeader {
+      background: var(--color1);
+      margin-top: 40px;
+      color: white;
+      border-radius: 10px;
+      padding: 4px 15px;
+    }
+  
+  .index-header {
+    height: 100vh;
+    background: black;
+  }
+  
+  .index-header nav ul {
+    text-decoration: none;
+  }
+  
+  .index-header nav ul li {
+    margin: 2px 10px;
+  }
+  
+  .index-header nav ul li a {
+    color: var(--color1);
+  }
+  
+  #navTitles {
+      background: rgba(19, 64, 116, 0.5);
+      padding: 5px;
+      border-radius: 5px;
+      color: white;
+    }  
+  
+  #search {
+    height: 100vh;
   }
 
-.index-header {
-  height: 100vh;
-  background: black;
-}
+  #intro {
+    color: rgb(255, 255, 255);
+  }
 
-.index-header nav ul {
-  text-decoration: none;
-}
-
-.index-header nav ul li {
-  margin: 2px 10px;
-}
-
-.index-header nav ul li a {
-  color: var(--color1);
-}
-
-#navTitles {
+  .nav-btn {
+    width: 100%;
+    margin-top: 1%;
+  }
+  /* index.html styling end */
+  
+  /* meditation.html styling start */
+  .title {
+    color: var(--color3);
+  }
+  
+  .meditation-nav a {
+    margin: 2px 10px;
+    color: var(--color2);
+  }
+  
+  #meditation-area {
+    height: 90vh;
+  }
+  /* meditation.html styling end */
+  
+  /* favorites.html start */
+  #favorites li img {
+    width: 35%;
+  }
+  
+  #favorites li p {
+    width: 60%;
+  }
+  
+  .fav-title {
+    padding-bottom: 40px;
+    padding-top: 40px;
+    font-weight: lighter;
+    text-decoration: underline double var(--color1) 2px;
+  }
+  /* favorites.html end */
+  
+  /* Utility classes start */
+  .bg-image {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .quote-area {
     background: rgba(19, 64, 116, 0.5);
-    padding: 5px;
+    color: var(--color2);
     border-radius: 5px;
-    color: white;
-  }  
-
-#intro {
-  color: rgb(255, 255, 255);
-}
-
-#search {
-  height: 100vh;
-}
-
-.nav-btn {
-  width: 100%;
-  margin-top: 1%;
-}
-/* index.html styling end */
-
-/* meditation.html styling start */
-.meditation-body {
-  background: var(--color1);
-}
-
-.title {
-  color: var(--color3);
-}
-
-.meditation-nav a {
-  margin: 2px 10px;
-  color: var(--color2);
-}
-
-#meditation-area {
-  height: 90vh;
-}
-/* meditation.html styling end */
-
-/* favorites.html start */
-.fav-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero {
-  font-size: 42px;
-  padding: 0 0 0 5vw;
-}
-
-.nav {
-  font-size: 28px;
-  justify-content: space-between;
-}
-
-#favorites li img {
-  width: 35%;
-}
-
-#favorites li p {
-  width: 60%;
-}
-
-/* favorites.html end */
-
-/* Utility classes start */
-.bg-image {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.quote-area {
-  background: rgba(19, 64, 116, 0.5);
-  color: var(--color2);
-  border-radius: 5px;
-  max-width: 350px;
-}
-/* Utility classes end */
+    max-width: 350px;
+  }
+  /* Utility classes end */

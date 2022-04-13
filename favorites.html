@@ -11,38 +11,20 @@
     <!-- <link rel="stylesheet" href="styles/debug.css"> -->
 </head>
 
-
-<div class="block">
-    <nav class="nav">
-        <div class="nav-left">
-            <div class="nav-item">
-                <h1 class="title">Meditation Buddy</h1>
-            </div>
+<body class="body">
+    <header class="is-mobile">
+        <div class= "is-flex is-justify-content-space-between is-flex-wrap-wrap is-flex-direction-column is-align-items-center">
+            <h1 class="title is-size-3-mobile is-size-1-tablet">Meditation Buddy</h1>
+            <nav class="meditation-nav is-flex">
+                <a class="subtitle" href="./index.html">Return to Home</a>
+            </nav>
         </div>
-        <div class="nav-center">
-            
-        </div>
-        <div class="nav-right">
-            <a class="nav-item" href="./index.html">Return to Home</a>
-            <a class="nav-item" href="./meditation.html">Meditation Page</a>
-        </div>
-    </nav>
-
-
-
-    <!-- <div class="column is-flex is-justify-content-space-between is-flex-wrap-wrap">
-        <h1 class="title is-size-3-mobile is-size-1-tablet">Meditation Buddy</h1>
-        <nav class="meditation-nav nav is-flex">
-            <a class="subtitle" href="./index.html">Return to Home</a>
-            <a class="subtitle" href="./meditation.html">Meditation Page</a>
-        </nav>
-    </div> -->
-</div>
+    </header>
 
 
     <main class ="column is-two-thirds is-offset-2 has-text-centered is-size-3 has-background-black">
         <div></div>
-        <h2>Favorite Meditations</h2>
+        <h2 class="fav-title title is-size-1">Favorite Meditations</h2>
         <!-- display favorite quotes and images -->
         <ul id="favorites" class="is-flex is-flex-direction-column"></ul>
     </main>
