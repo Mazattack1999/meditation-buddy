@@ -175,8 +175,8 @@ function createFavoritesList() {
 }
 
 
-console.log(currentPage)
-if (currentPage.includes("index.html")){
+console.log(currentPage, window.location.pathname)
+if (currentPage.includes("index.html") || window.location.pathname === "/"){
     // if current page is index.html
     // index.html event listeners
     submitBtn.addEventListener("click", function(event){
