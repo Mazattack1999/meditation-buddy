@@ -1,4 +1,4 @@
-var categories = ["nature", "space", "animals", ];
+var categories = ["nature", "space", "animals", "zen", "dogs", "camping", "element", "ocean"];
 var pApiKey = "563492ad6f917000010000015d8387ef83034b6792272314a7fbbf6b";
 // if inital page load has completed or not
 var starting = true;
