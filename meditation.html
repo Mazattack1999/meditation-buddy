@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meditation Buddy</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+
+<body class="body">
+    <header class="is-mobile">
+        <div class="is-flex is-flex-direction-column is-align-items-center is-justify-content-space-between is-flex-wrap-wrap">
+            <h1 class="title is-size-3-mobile is-size-1-tablet">Meditation Buddy</h1>
+            <nav class="meditation-nav is-flex">
+                <a class="subtitle" href="./index.html">Return to Home</a>
+                <a class="subtitle" href="./favorites.html">Favorites</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="meditation-area" class="bg-image is-flex is-flex-direction-column">
+        <!-- Insert background image to cover all of main -->
+
+        <!-- Randomly generated quote -->
+        <div class="column is-flex is-justify-content-center is-align-items-center">
+            <p id="searched-quote" class="quote quote-area has-text-centered">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. In quidem nulla saepe consequuntur vitae necessitatibus error minus dolor odit hic, libero neque inventore facere quam quae minima laborum repudiandae assumenda.
+            </p>
+        </div>
+
+
+        <!-- Save button -->
+        <div class="is-flex is-justify-content-flex-end is-align-items-flex-end">
+            <button id="save-button" class="button mb-2 mr-2 is-info is-light is-rounded is-focused">Save as Favorite</button>
+        </div>
+    </main>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
