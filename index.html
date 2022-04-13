@@ -8,32 +8,53 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
-<body>
-    <header>
-        <h1>Meditation Buddy</h1> 
-        <p id="quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium corrupti numquam velit blanditiis magni, nihil facilis? Blanditiis repellendus suscipit eius, recusandae eveniet est dignissimos, commodi architecto quidem repellat similique iusto?</p>
-        <nav>
-            <ul>
-                <li>
-                    <a href="./favorites.html">Favorites</a>
-                </li>
-                <li>
-                    <a href="#search">Search</a>
-                </li>
-            </ul>
-        </nav>
+<body class="body">
+    <!-- columns container -->
+    <header id="index-header" class="bg-image index-header columns is-mobile">
+        <!-- single column -->
+        <div class="column is-flex is-flex-direction-column is-align-items-center is-justify-content-space-between">
+
+            <h1 id="topHeader" class="is-size-3-mobile is-size-1-tablet has-text-centered">Meditation Buddy</h1> 
+            <p id="quote" class="quote quote-area has-text-centered"></p>
+            <nav class="nav">
+                <ul class="is-flex justify-content-space-between">
+                    <li>
+                        <a href="./favorites.html" class="nav-item">
+                            <h1 id="navTitles" class="title is-4">Favorites</h1>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#search" class="nav-item">
+                            <h1 id="navTitles" class="title is-4">Search</h1>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section id="search">
-        <!-- Intro text -->
-        <p id="intro">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore a minus, quisquam harum reprehenderit adipisci ad, molestiae reiciendis tempore itaque error architecto sed alias mollitia asperiores, voluptates laudantium totam quas?</p>
+    <!-- Columns container -->
+    <section id="search" class="columns">
+        <div class="column is-flex is-flex-direction-column is-align-items-center is-justify-content-flex-start">
+            <!-- Intro text -->
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <p id="intro" class="has-text-centered mb-6 mt-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore a minus, quisquam harum reprehenderit adipisci ad, molestiae reiciendis tempore itaque error architecto sed alias mollitia asperiores, voluptates laudantium totam quas?</p>
+                </div>
+            </div>
 
-        <form>
-            <input type="text" placeholder="Nature, space, animals..." />
-            <button id="submit-button" type="submit">Start Relaxing!</button>
-        </form>
+            <div class="box">
+                <div class="field">
+                    <form class="is-flex is-flex-direction-column mb-4">
+                        <input id="search-bar" type="text" placeholder="Nature, space, animals..." class="mb-2 input is-info is-focused "/>
+                        <button id="submit-button" type="submit" class="button nav-btn is-info is-light is-rounded is-focused">Start Relaxing!</button>
+                    </form>
 
-        <button id="random-button" type="button">Random Category</button>
+                    <hr>
+                    <button id="random-button" type="button" class="button nav-btn is-link is-light is-rounded is-focused">Random Category</button>
+                </div>
+            </div>
+        </div>
     </section>
 
 
