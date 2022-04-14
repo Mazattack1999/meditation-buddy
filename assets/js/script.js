@@ -26,6 +26,7 @@ var homeQuote = document.querySelector("#quote");
 var submitBtn = document.querySelector("#submit-button");
 var searchBar = document.querySelector("#search-bar");
 var randomBtn = document.querySelector("#random-button");
+var searchModal = document.querySelector("#search-modal");
 
 // meditation page elements
 var medMain = document.querySelector("#meditation-area");
@@ -69,7 +70,12 @@ function storeQuotes() {
             starting = false;
             loadHomePage();
             //homepage interval to cycle through random image and quote every 10 seconds
-            setInterval(loadHomePage, 10000)
+            setInterval(function(){
+                //load page if there is image data
+                if (imageData.length > 0){
+                    loadHomePage()
+                }
+            }, 10000)
         } else if(searching) {
             searchData();
         }
@@ -110,8 +116,14 @@ function searchData() {
         image: randomImage,
         quote: randomQuote
     }))
-    // go to meditation page
-    window.location.href = "meditation.html";
+
+    if (imageData.length > 0) {
+        // go to meditation page
+        window.location.href = "meditation.html";
+    } else {
+        searchModal.classList.remove("is-hidden");
+    }
+    
 }
 
 function loadMeditation(object) {
@@ -183,6 +195,8 @@ if(currentPage.includes("meditation.html")){
     favBtn.addEventListener("click", function(event){
         var fav = JSON.parse(localStorage.getItem("search-result"));
         saveFavorite(fav);
+        // hide favorite button so user can't click it again
+        favBtn.classList.add("is-hidden");
     })
 
 
