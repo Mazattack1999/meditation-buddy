@@ -134,6 +134,10 @@ body {
 .delete {
   margin: 2%;
 }
+
+.clearBtn {
+  margin: 2%;
+}
 /* favorites.html end */
 
 /* Utility classes start */
