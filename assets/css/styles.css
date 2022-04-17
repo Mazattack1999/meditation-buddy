@@ -121,6 +121,7 @@ body {
 
 #favorites li p {
   width: 60%;
+  margin: 2%;
 }
 
 .fav-title {
@@ -130,6 +131,13 @@ body {
   text-decoration: underline double var(--color1) 2px;
 }
 
+.delete {
+  margin: 2%;
+}
+
+.clearBtn {
+  margin: 2%;
+}
 /* favorites.html end */
 
 /* Utility classes start */
