@@ -140,7 +140,7 @@ function loadMeditation(object) {
 function loadFavorites() {
     // if local storage has favoirtes, load them, else set item
     if(localStorage.getItem("favorites")) {
-        favorites = JSON.parse(localStorage.getItem("favorites"));
+        favorites = JSON.parse(localStorage.getItem("favorites")) || [];
     } else {
         saveFavorite();
     }
@@ -148,6 +148,7 @@ function loadFavorites() {
 
 function saveFavorite(value) {
     // if value is not null, save it to favorites
+    console.log(favorites,"save")
     if(value) {
         favorites.push(value);
     }
@@ -157,7 +158,8 @@ function saveFavorite(value) {
 function createFavoritesList() {
     // favorites page elements
     var favList = document.querySelector("#favorites");
-
+    favList.innerHTML = "";
+    favorites = JSON.parse(localStorage.getItem("favorites")) || []
     // loop through favorites array
     for (var i = 0; i < favorites.length; i++) {
         var currentImage = favorites[i].image;
@@ -184,14 +186,33 @@ function createFavoritesList() {
         //create delete btn
         var btn = document.createElement("button")
         btn.classList.add("button", "is-dark", "delete")
+        btn.setAttribute("data-id", favorites[i].image.id)
+        btn.addEventListener("click", deleteFavorites)
         //append button to favContainer
         favContainer.appendChild(btn)
 
         // append favContainer to favList
         favList.appendChild(favContainer);
+
+        console.log(favorites[i])
     }
 }
 
+function deleteFavorites() {
+    var deleteItemEl = this.getAttribute("data-id")
+    var fav = JSON.parse(localStorage.getItem("favorites")) || []
+    let favList = []
+    for(let i=0; i < fav.length;i++){
+        if(fav[i].image.id != deleteItemEl){
+            favList.push(fav[i])
+        }
+
+    }
+
+    localStorage.setItem("favorites", JSON.stringify(favList));
+    createFavoritesList()
+
+}
 
 console.log(currentPage, window.location.pathname)
 if(currentPage.includes("meditation.html")){
