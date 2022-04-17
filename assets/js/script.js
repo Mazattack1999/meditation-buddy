@@ -183,8 +183,7 @@ function createFavoritesList() {
 
         //create delete btn
         var btn = document.createElement("button")
-        btn.innerText = "Delete"
-        btn.classList.add("button", "is-primary", "is-light", "is-responsive")
+        btn.classList.add("button", "is-dark", "delete")
         //append button to favContainer
         favContainer.appendChild(btn)
 
